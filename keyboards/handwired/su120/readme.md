@@ -4,20 +4,20 @@
 
 Assemblable keyboard board with up to 120 key.
 
-Keyboard Maintainer: [e3w2q](https://github.com/e3w2q)
-Hardware Supported: [SU120 PCB](https://github.com/e3w2q/su120-keyboard/tree/master/pcb), Pro Micro ATmega32u4
-Hardware Availability: [SU120 PCB Order Guide](https://github.com/e3w2q/su120-keyboard-doc/blob/master/common/pcb_order_guide.md)
+Keyboard Maintainer: [e3w2q](https://github.com/e3w2q)  
+Hardware Supported: [SU120 PCB](https://github.com/e3w2q/su120-keyboard/tree/master/pcb), Pro Micro ATmega32u4  
+Hardware Availability: [SU120 Repository](https://github.com/e3w2q/su120-keyboard/)
 
 Make example for this keyboard (after setting up your build environment):
 
     make handwired/su120/rev2:default
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
-
-Install Example: (for Pro Micro)
+Example of flashing this keyboard:
 
     make handwired/su120/rev2:default:avrdude
 
 Note:  
   Current firmware is **rev2**.
+
+See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
