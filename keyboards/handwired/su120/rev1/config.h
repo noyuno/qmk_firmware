@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DESCRIPTION     Expandable keyboard with up to 120 keys
 
 /* key matrix size */
-#define MATRIX_ROWS 12 //master: 6 rows, slave: 6 rows
+#define MATRIX_ROWS 6*2 //master: 6 rows, slave: 6 rows
 #define MATRIX_COLS 10
 
 /*
@@ -41,8 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { D4, C6, D7, E6, B4, B5 }
-#define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B2, B6, D1, D0 }
+#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
+#define MATRIX_COL_PINS { D1, D0, D4, C6, D7, E6, B4, B5, F4, F5 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
@@ -69,10 +69,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // /*== all animations enable ==*/
 //   #define RGBLIGHT_ANIMATIONS
 // /*== or choose animations ==*/
-  #define RGBLIGHT_EFFECT_BREATHING
-  #define RGBLIGHT_EFFECT_RAINBOW_MOOD
+//   #define RGBLIGHT_EFFECT_BREATHING
+//   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
 //   #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-  #define RGBLIGHT_EFFECT_SNAKE
+//   #define RGBLIGHT_EFFECT_SNAKE
 //   #define RGBLIGHT_EFFECT_KNIGHT
 //   #define RGBLIGHT_EFFECT_CHRISTMAS
 //   #define RGBLIGHT_EFFECT_STATIC_GRADIENT
@@ -87,7 +87,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
+//#define DEBOUNCE 5
+#define DEBOUNCING_DELAY 5
 
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
@@ -250,3 +251,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Bootmagic Lite key configuration */
 // #define BOOTMAGIC_LITE_ROW 0
 // #define BOOTMAGIC_LITE_COLUMN 0
+
+/* Serial settings */
+#define USE_SERIAL
+#define RGBLED_SPLIT {8,8}
+

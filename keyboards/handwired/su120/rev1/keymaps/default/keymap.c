@@ -17,35 +17,31 @@
 
 // Defines the keycodes used by our macros in process_record_user
 enum custom_keycodes {
-  QMKBEST = SAFE_RANGE,
-  QMKURL,
-  SS_00,
-  SS_000
+  SEND_00 = SAFE_RANGE,
+  SEND_000
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Default Layer
    *  Master Side (USB Cable Connected Side)
-   *       A    B    C    D    E    F    G    H    I    J
-   *    ,---------------------------------------------------
-   *  1 |    =    (    )   BS  Esc   F1   F2   F3   F4   F5 
-   *  2 | NmLk  KP/  KP*  Tab HANK    1    2    3    4    5 
-   *  3 |  KP7  KP8  KP9  KP-  Tab    Q    W    E    R    T 
-   *  4 |  KP4  KP5  KP6  KP+ Caps    A    S    D    F    G 
-   *  5 |  KP1  KP2  KP3 Entr Shft    Z    W    C    V    B 
-   *  6 |  KP0   00    .    , Ctrl  GUI  Alt MHEN Spce Spce 
-   *    `---------------------------------------------------
+   *  ,---------------------------------------------------
+   *  |    =    (    )   BS  Esc   F1   F2   F3   F4   F5 
+   *  | NmLk  KP/  KP*  Tab Hank    1    2    3    4    5 
+   *  |  KP7  KP8  KP9  KP-  Tab    Q    W    E    R    T 
+   *  |  KP4  KP5  KP6  KP+ Caps    A    S    D    F    G 
+   *  |  KP1  KP2  KP3 Entr Shft    Z    W    C    V    B 
+   *  |  KP0   00    .    , Ctrl  GUI  Alt MHEN Spce Spce 
+   *  `---------------------------------------------------
    *  Slave Side (USB Cable Not Connected Side)
-   *       A    B    C    D    E    F    G    H    I    J
-   *    ,---------------------------------------------------
-   *  1 |   F6   F7   F8   F9  F10  F11  F12 PtSc  Del  Ins 
-   *  2 |    6    7    8    9    0    -    =   BS   BS Home 
-   *  3 |    Y    U    I    O    P    [    ]    \ Entr PgUp 
-   *  4 |    H    J    K    L    ;    ' Entr Entr Entr PgDn 
-   *  5 |    N    M    ,    .    / Shft Shft Shft   Up  End 
-   *  6 | Spce  HEN KANA  Alt  App Ctrl MO(1 Left Down Rght 
-   *    `---------------------------------------------------
+   *  ,---------------------------------------------------
+   *  |   F6   F7   F8   F9  F10  F11  F12 PtSc  Del  Ins 
+   *  |    6    7    8    9    0    -    =   BS   BS Home 
+   *  |    Y    U    I    O    P    [    ]    \ Entr PgUp 
+   *  |    H    J    K    L    ;    ' Entr Entr Entr PgDn 
+   *  |    N    M    ,    .    / Shft Shft Shft   Up  End 
+   *  | Spce  HEN KANA  Alt  App Ctrl MO(1)Left Down Rght 
+   *  `---------------------------------------------------
    */
 
   [0] = LAYOUT( /* Base */ 
@@ -54,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_P7,    KC_P8,    KC_P9,    KC_PMNS,  KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     
     KC_P4,    KC_P5,    KC_P6,    KC_PPLS,  KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     
     KC_P1,    KC_P2,    KC_P3,    KC_ENT,   KC_LSFT,  KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     
-    KC_P0,    SS_00,    KC_PDOT,  KC_COMM,  KC_LCTL,  KC_LGUI,  KC_LALT,  KC_MHEN,  KC_SPC,   KC_SPC,   
+    KC_P0,    SEND_00,  KC_PDOT,  KC_COMM,  KC_LCTL,  KC_LGUI,  KC_LALT,  KC_MHEN,  KC_SPC,   KC_SPC,   
 
     KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_PSCR,  KC_DEL,   KC_INS,   
     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,  KC_BSPC,  KC_HOME,  
@@ -83,28 +79,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case SS_00:
+    case SEND_00:
       if (record->event.pressed) {
-        // when keycode SS_00 is pressed
+        // when keycode SEND_00 is pressed
         SEND_STRING("00");
       } else {
-        // when keycode SS_00 is released
+        // when keycode SEND_00 is released
       }
       break;
-    case QMKBEST:
+    case SEND_000:
       if (record->event.pressed) {
-        // when keycode QMKBEST is pressed
-        SEND_STRING("QMK is the best thing ever!");
+        // when keycode SEND_000 is pressed
+        //SEND_STRING("000" SS_TAP(X_ENTER));
+        SEND_STRING("000");
       } else {
-        // when keycode QMKBEST is released
-      }
-      break;
-    case QMKURL:
-      if (record->event.pressed) {
-        // when keycode QMKURL is pressed
-        SEND_STRING("https://qmk.fm/" SS_TAP(X_ENTER));
-      } else {
-        // when keycode QMKURL is released
+        // when keycode SEND_000 is released
       }
       break;
   }

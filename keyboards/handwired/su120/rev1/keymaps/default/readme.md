@@ -1,1 +1,1 @@
-# The default keymap for su120
+# The default keymap for hecomi_alpha
