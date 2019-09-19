@@ -1,1 +1,1 @@
-# The default keymap for hecomi_alpha
+# 3x10 ortholinear keyboard for SU120
