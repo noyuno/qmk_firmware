@@ -33,43 +33,59 @@ enum custom_keycodes {
   SEND_SA6, SEND_SB6, SEND_SC6, SEND_SD6, SEND_SE6, SEND_SF6, SEND_SG6, SEND_SH6, SEND_SI6, SEND_SJ6  
 };
 
+enum layer_number {
+    _DEFAULT = 0,
+    _LAYER1,
+    _LAYER2,
+    _LAYER3,
+    _LAYER4,
+    _RGB,
+};
+
+enum encoder_number {
+    _1ST_ENC = 0,
+    _2ND_ENC,
+    _3RD_ENC,
+    _4TH_ENC,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Default Layer
    *  Master Side (USB Cable Connected Side)
-   *  ,---------------------------------------------------
-   *  |   A1   B1   C1   D1   E1   F1   G1   H1   I1   J1 
-   *  |   A2   B2   C2   D2   E2   F2   G2   H2   I2   J2 
-   *  |   A3   B3   C3   D3   E3   F3   G3   H3   I3   J3 
-   *  |   A4   B4   C4   D4   E4   F4   G4   H4   I4   J4 
-   *  |   A5   B5   C5   D5   E5   F5   G5   H5   I5   J5 
-   *  |   A6   B6   C6   D6   E6   F6   G6   H6   I6   J6 
-   *  `---------------------------------------------------
+   *  ,-----------------------------------------
+   *  |   A1   B1   C1   D1   E1   F1   G1   H1 
+   *  |   A2   B2   C2   D2   E2   F2   G2   H2 
+   *  |   A3   B3   C3   D3   E3   F3   G3   H3 
+   *  |   A4   B4   C4   D4   E4   F4   G4   H4 
+   *  |   A5   B5   C5   D5   E5   F5   G5   H5 
+   *  |   A6   B6   C6   D6   E6   F6   G6   H6 
+   *  `-----------------------------------------
    *  Slave Side (USB Cable Not Connected Side)
-   *  ,---------------------------------------------------
-   *  |  SA1  SB1  SC1  SD1  SE1  SF1  SG1  SH1  SI1  SJ1 
-   *  |  SA2  SB2  SC2  SD2  SE2  SF2  SG2  SH2  SI2  SJ2 
-   *  |  SA3  SB3  SC3  SD3  SE3  SF3  SG3  SH3  SI3  SJ3 
-   *  |  SA4  SB4  SC4  SD4  SE4  SF4  SG4  SH4  SI4  SJ4 
-   *  |  SA5  SB5  SC5  SD5  SE5  SF5  SG5  SH5  SI5  SJ5 
-   *  |  SA6  SB6  SC6  SD6  SE6  SF6  SG6  SH6  SI6  SJ6 
-   *  `---------------------------------------------------
+   *  ,-----------------------------------------
+   *  |  SA1  SB1  SC1  SD1  SE1  SF1  SG1  SH1 
+   *  |  SA2  SB2  SC2  SD2  SE2  SF2  SG2  SH2 
+   *  |  SA3  SB3  SC3  SD3  SE3  SF3  SG3  SH3 
+   *  |  SA4  SB4  SC4  SD4  SE4  SF4  SG4  SH4 
+   *  |  SA5  SB5  SC5  SD5  SE5  SF5  SG5  SH5 
+   *  |  SA6  SB6  SC6  SD6  SE6  SF6  SG6  SH6 
+   *  `-----------------------------------------
    */
 
-  [0] = LAYOUT( /* Base */ 
-    SEND_A1,  SEND_B1,  SEND_C1,  SEND_D1,  SEND_E1,  SEND_F1,  SEND_G1,  SEND_H1,  SEND_I1,  SEND_J1,  
-    SEND_A2,  SEND_B2,  SEND_C2,  SEND_D2,  SEND_E2,  SEND_F2,  SEND_G2,  SEND_H2,  SEND_I2,  SEND_J2,  
-    SEND_A3,  SEND_B3,  SEND_C3,  SEND_D3,  SEND_E3,  SEND_F3,  SEND_G3,  SEND_H3,  SEND_I3,  SEND_J3,  
-    SEND_A4,  SEND_B4,  SEND_C4,  SEND_D4,  SEND_E4,  SEND_F4,  SEND_G4,  SEND_H4,  SEND_I4,  SEND_J4,  
-    SEND_A5,  SEND_B5,  SEND_C5,  SEND_D5,  SEND_E5,  SEND_F5,  SEND_G5,  SEND_H5,  SEND_I5,  SEND_J5,  
-    SEND_A6,  SEND_B6,  SEND_C6,  SEND_D6,  SEND_E6,  SEND_F6,  SEND_G6,  SEND_H6,  SEND_I6,  SEND_J6,  
-
-    SEND_SA1, SEND_SB1, SEND_SC1, SEND_SD1, SEND_SE1, SEND_SF1, SEND_SG1, SEND_SH1, SEND_SI1, SEND_SJ1, 
-    SEND_SA2, SEND_SB2, SEND_SC2, SEND_SD2, SEND_SE2, SEND_SF2, SEND_SG2, SEND_SH2, SEND_SI2, SEND_SJ2, 
-    SEND_SA3, SEND_SB3, SEND_SC3, SEND_SD3, SEND_SE3, SEND_SF3, SEND_SG3, SEND_SH3, SEND_SI3, SEND_SJ3, 
-    SEND_SA4, SEND_SB4, SEND_SC4, SEND_SD4, SEND_SE4, SEND_SF4, SEND_SG4, SEND_SH4, SEND_SI4, SEND_SJ4, 
-    SEND_SA5, SEND_SB5, SEND_SC5, SEND_SD5, SEND_SE5, SEND_SF5, SEND_SG5, SEND_SH5, SEND_SI5, SEND_SJ5, 
-    SEND_SA6, SEND_SB6, SEND_SC6, SEND_SD6, SEND_SE6, SEND_SF6, SEND_SG6, SEND_SH6, SEND_SI6, SEND_SJ6  
+  [_DEFAULT] = LAYOUT( /* Base */ 
+    SEND_A1,  SEND_B1,  SEND_C1,  SEND_D1,  SEND_E1,  SEND_F1,  SEND_G1,  SEND_H1,  
+    SEND_A2,  SEND_B2,  SEND_C2,  SEND_D2,  SEND_E2,  SEND_F2,  SEND_G2,  SEND_H2,  
+    SEND_A3,  SEND_B3,  SEND_C3,  SEND_D3,  SEND_E3,  SEND_F3,  SEND_G3,  SEND_H3,  
+    SEND_A4,  SEND_B4,  SEND_C4,  SEND_D4,  SEND_E4,  SEND_F4,  SEND_G4,  SEND_H4,  
+    SEND_A5,  SEND_B5,  SEND_C5,  SEND_D5,  SEND_E5,  SEND_F5,  SEND_G5,  SEND_H5,  
+    SEND_A6,  SEND_B6,  SEND_C6,  SEND_D6,  SEND_E6,  SEND_F6,  SEND_G6,  SEND_H6,  
+                                                                
+    SEND_SA1, SEND_SB1, SEND_SC1, SEND_SD1, SEND_SE1, SEND_SF1, SEND_SG1, SEND_SH1, 
+    SEND_SA2, SEND_SB2, SEND_SC2, SEND_SD2, SEND_SE2, SEND_SF2, SEND_SG2, SEND_SH2, 
+    SEND_SA3, SEND_SB3, SEND_SC3, SEND_SD3, SEND_SE3, SEND_SF3, SEND_SG3, SEND_SH3, 
+    SEND_SA4, SEND_SB4, SEND_SC4, SEND_SD4, SEND_SE4, SEND_SF4, SEND_SG4, SEND_SH4, 
+    SEND_SA5, SEND_SB5, SEND_SC5, SEND_SD5, SEND_SE5, SEND_SF5, SEND_SG5, SEND_SH5, 
+    SEND_SA6, SEND_SB6, SEND_SC6, SEND_SD6, SEND_SE6, SEND_SF6, SEND_SG6, SEND_SH6  
   ),
 };
 
@@ -210,3 +226,37 @@ void matrix_scan_user(void) {
 void led_set_user(uint8_t usb_led) {
 
 }
+
+void encoder_update_user(uint8_t index, bool clockwise) {
+    switch (index) {
+      case _1ST_ENC:
+        if (clockwise) {
+          SEND_STRING("1ST_ENC_R");
+        } else {
+          SEND_STRING("1ST_ENC_L");
+        }
+        break;
+      case _2ND_ENC:
+        if (clockwise) {
+          SEND_STRING("2ND_ENC_R");
+        } else {
+          SEND_STRING("2ND_ENC_L");
+        }
+        break;
+      case _3RD_ENC:
+        if (clockwise) {
+          SEND_STRING("3RD_ENC_R");
+        } else {
+          SEND_STRING("3RD_ENC_L");
+        }
+        break;
+      case _4TH_ENC:
+        if (clockwise) {
+          SEND_STRING("4TH_ENC_R");
+        } else {
+          SEND_STRING("4TH_ENC_L");
+        }
+        break;
+    }
+}
+

@@ -1,1 +1,0 @@
-# 17 key keypad keymap for SU120
