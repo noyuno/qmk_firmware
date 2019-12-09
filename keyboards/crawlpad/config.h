@@ -26,7 +26,7 @@
 #define DIODE_DIRECTION ROW2COL
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
+#define DEBOUNCING_DELAY 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -44,3 +44,4 @@
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 3
 #endif
+
