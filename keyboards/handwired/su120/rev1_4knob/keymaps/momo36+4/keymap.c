@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSLS,  
     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_ENT,   
     KC_N,     KC_M,     KC_COMM,  KC_RSFT,  KC_UP,    MO(1),    
-    KC_SPC,   KC_HENK,  KC_RALT,  KC_LEFT,  KC_DOWN,  KC_RGHT   
+    KC_SPC,   MO(1),    KC_RALT,  KC_LEFT,  KC_DOWN,  KC_RGHT   
   ),
 
   [1] = LAYOUT(
@@ -72,8 +72,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX   
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
+    XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX   
   ),
 };
 

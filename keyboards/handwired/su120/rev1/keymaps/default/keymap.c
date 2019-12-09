@@ -37,9 +37,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *  ,---------------------------------------------------
    *  |   F6   F7   F8   F9  F10  F11  F12 PtSc  Del  Ins 
    *  |    6    7    8    9    0    -    =   BS   BS Home 
-   *  |    Y    U    I    O    P    [    ]    \ Entr PgUp 
-   *  |    H    J    K    L    ;    ' Entr Entr Entr PgDn 
-   *  |    N    M    ,    .    / Shft Shft Shft   Up  End 
+   *  |    Y    U    I    O    P    [    ]    \ Entr  End 
+   *  |    H    J    K    L    ;    ' Entr Entr Entr  PgUp
+   *  |    N    M    ,    .    / Shft Shft Shft   Up  PgDn
    *  | Spce  HEN KANA  Alt  App Ctrl MO(1)Left Down Rght 
    *  `---------------------------------------------------
    */
@@ -54,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_PSCR,  KC_DEL,   KC_INS,   
     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,  KC_BSPC,  KC_HOME,  
-    KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,  KC_BSLS,  KC_ENT,   KC_PGUP,  
-    KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,  KC_ENT,   KC_ENT,   KC_ENT,   KC_PGDN,  
-    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,  KC_RSFT,  KC_RSFT,  KC_UP,    KC_END,   
+    KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,  KC_BSLS,  KC_ENT,   KC_END,   
+    KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,  KC_ENT,   KC_ENT,   KC_ENT,   KC_PGUP,  
+    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,  KC_RSFT,  KC_RSFT,  KC_UP,    KC_PGDN,  
     KC_SPC,   KC_HENK,  KC_KANA,  KC_RALT,  KC_APP,   KC_RCTL,  MO(1),    KC_LEFT,  KC_DOWN,  KC_RGHT   
   ),
 
@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
     XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  
-    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX   
+    XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX   
   ),
 };
 
