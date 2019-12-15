@@ -46,7 +46,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define UNUSED_PINS
 
 /* Rotary encoder */
-#define NUMBER_OF_ENCODERS 5
 #define ENCODERS_PAD_A { B6, B3, F7, F5, B5 }
 #define ENCODERS_PAD_B { B2, B1, F6, F4, B4 }
 #define ENCODER_RESOLUTION 4
