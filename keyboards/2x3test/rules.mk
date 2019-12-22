@@ -41,3 +41,5 @@ AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 HD44780_ENABLE = no         # Enable support for HD44780 based LCDs
 SPLIT_KEYBOARD = yes
+CUSTOM_MATRIX = yes
+SRC += matrix.c
